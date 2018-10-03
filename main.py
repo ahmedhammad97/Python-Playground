@@ -7,7 +7,16 @@ import BSTree
 
 myTree = BSTree.BST()
 
+nums = []
 for i in range(10):
-    myTree.add(random.randint(1,100))
+    num = random.randint(1,100)
+    nums.append(num)
+    myTree.add(num)
 
+print(nums)
+
+myTree.preOrderSearch()
+print("-----------------------------")
 myTree.inOrderSearch()
+print("-----------------------------")
+myTree.postOrderSearch()

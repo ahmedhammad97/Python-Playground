@@ -15,4 +15,16 @@ class BST:
         if not self.root:
             print("Empty Tree")
         else:
-            self.root.doSearch()
+            self.root.doInOrder()
+
+    def preOrderSearch(self):
+        if not self.root:
+            print("Empty Tree")
+        else:
+            self.root.doPreOrder()
+
+    def postOrderSearch(self):
+        if not self.root:
+            print("Empty Tree")
+        else:
+            self.root.doPostOrder()

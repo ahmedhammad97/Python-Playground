@@ -16,7 +16,17 @@ class Node:
             else:
                 self.right.addChild(x)
 
-    def doSearch(self):
-        if self.left : self.left.doSearch()
+    def doInOrder(self):
+        if self.left : self.left.doInOrder()
         print(self.val)
-        if self.right : self.right.doSearch()
+        if self.right : self.right.doInOrder()
+
+    def doPreOrder(self):
+        print(self.val)
+        if self.left : self.left.doPreOrder()
+        if self.right : self.right.doPreOrder()
+
+    def doPostOrder(self):
+        if self.left : self.left.doPostOrder()
+        if self.right : self.right.doPostOrder()
+        print(self.val)
